@@ -1,8 +1,10 @@
 Lenovo A7000-a (aio_row)
 ==============
 
+## About Device:
 ![Lenovo A7000-a](https://img.xda-cdn.com/07icUxTNuZWDx96QYT5cuxU8h9o=/https%3A%2F%2F1.bp.blogspot.com%2F-Bi3y-tnLrdw%2FVzyVpZgjqEI%2FAAAAAAAAAgw%2Ff-K2t1MDmjID056U9iHKCfSxqnk-rItBgCLcB%2Fs640%2Fdareaosp.png "AOSP on Lenovo A7000-a")
 
+### Specifications:
 Basic   | Spec Sheet
 -------:|:-------------------------
 CPU     | 1.5GHz 64-bit Octa-Core MT6752
@@ -33,12 +35,14 @@ This branch is for building 7.x based ROMs.
   - LED Notifications
   - FM Radio
 
-### Not Working:
+### Untested:
   - RIL for SMS/calls/internet/LTE (need some testing)
+  - Offline Charging
+
+### Not Working:
   - Broken Video Codec
   - Lenovo-specific features (shipped on board), includes proprietary camera limitations
-  - Offline Charging (untested)
-  - maybe more... (buggy for aosp, atm)
+  - maybe more...
 
 ### Other resource:
   - Kernel: 3.10.105 (Daredevil-2.0)
@@ -46,7 +50,8 @@ This branch is for building 7.x based ROMs.
 
 ### Credits (Sort by alphabetical order):
   - rohantaneja
-  - xakep1993
-  - daniel_hk
-  - mohancm100
+  - xakep1993 (initial steps towards nougat)
+  - daniel_hk (all his detailed guidelines and sources)
+  - mohancm100 (updated mtk_symbols)
+  - tanish2k09 (for all his motivation)
   - Team AMT, Russian Team of Android 7 A7000 
