@@ -1,0 +1,2 @@
+# FM
+MTK_FM_SUPPORT:=yes
