@@ -73,7 +73,6 @@ rild.libargs=-d /dev/ttyC0
 ro.telephony.sim.count=2
 ro.telephony.ril_class=MediaTekRIL
 ro.telephony.ril.config=fakeiccid
-#ro.telephony.default_network=0,1
 
 persist.gemini.sim_num=2
 persist.radio.default.sim=0
@@ -84,7 +83,6 @@ persist.radio.fd.off.r8.counter=5
 persist.radio.multisim.config=dsds
 
 bgw.current3gband=0
-#mux.debuglog.enable=0
 ril.external.md=0
 ril.current.share_modem=2
 ril.first.md=1

@@ -8,6 +8,11 @@ TARGET_BOOTLOADER_BOARD_NAME := mt6752
 # Legacy blobs
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
+# x64 bit assignment
+MTK_K64_SUPPORT := yes
+TARGET_IS_64_BIT := true
+TARGET_KMODULES := true
+
 # Kernel generals
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048

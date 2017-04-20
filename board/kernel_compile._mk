@@ -1,8 +1,3 @@
-# Kernel information
-MTK_K64_SUPPORT := yes
-TARGET_IS_64_BIT := true
-TARGET_KMODULES := true
-
 # Kernel properties
 CONFIG_NO_ERROR_ON_MISMATCH=y
 TARGET_KERNEL_SOURCE := kernel/lenovo/aio_row
