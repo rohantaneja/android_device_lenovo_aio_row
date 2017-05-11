@@ -64,8 +64,6 @@ on fs
 
 on fs
 
-   mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
-
 on post-fs
     # Support legacy paths
     symlink /sdcard /storage/sdcard0
