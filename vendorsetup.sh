@@ -21,5 +21,5 @@
 # function: add_lunch_combo generic-eng
 
 for var in eng user userdebug; do
-  add_lunch_combo aosp_aio_row-$var
+  add_lunch_combo lineage_aio_row-$var
 done

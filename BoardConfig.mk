@@ -46,5 +46,9 @@ EXTENDED_FONT_FOOTPRINT := true
 # Configure jemalloc for low memory
 MALLOC_SVELTE := true
 
+# RIL
+BOARD_PROVIDES_RILD := true
+BOARD_RIL_CLASS := ../../../device/lenovo/aio_row/ril
+
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop

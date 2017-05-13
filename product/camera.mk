@@ -5,7 +5,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
-    SnapdragonCamera
+    Snap
 
 # Camera Legacy
 PRODUCT_PACKAGES += \

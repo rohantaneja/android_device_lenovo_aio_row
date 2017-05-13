@@ -20,7 +20,6 @@ This branch is for building 7.x based ROMs.
 ### Working:
   - Wi-Fi
   - Wi-Fi tethering
-  - RIL for SMS/calls/internet/LTE (need some testing
   - GPS
   - Bluetooth
   - AGPS
@@ -36,15 +35,18 @@ This branch is for building 7.x based ROMs.
   - LED Notifications
   - FM Radio
 
-### Partially Working:
+### Untested:
+  - RIL for SMS/calls/internet/LTE (need some testing)
   - Offline Charging
 
 ### Not Working:
-  - Lenovo-specific features (shipped on board)
+  - Broken Video Codec
+  - Lenovo-specific features (shipped on board), includes proprietary camera limitations
+  - maybe more...
 
 ### Other resource:
-  - Kernel: 3.10.105 (Daredevil)
-  - Vendor blobs: https://github.com/rohantaneja/android_vendor_lenovo_aio_row
+  - Kernel: 3.10.105 (Daredevil-2.0)
+  - Vendor blobs: https://github.com/rohantaneja/vendor_lenovo_mt6752
 
 ### Credits (Sort by alphabetical order):
   - rohantaneja

@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
 # Packages
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio_policy.default \
     audio.usb.default \
     audio.r_submix.default \
     libaudiopolicymanagerdefault \

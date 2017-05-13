@@ -16,10 +16,7 @@
 # limitations under the License.
 #
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_as_supl.mk)
-
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+MTK_PROJECT_CONFIG := device/lenovo/aio_row/ProjectConfig.mk
 
 LOCAL_PATH := device/lenovo/aio_row
 
@@ -28,9 +25,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
-
-# Hack for building without kernel sources
-#$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
 # Device product elements
 include $(LOCAL_PATH)/product/*.mk
