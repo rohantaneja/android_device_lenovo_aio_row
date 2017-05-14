@@ -1,2 +1,0 @@
-# RIL
-BOARD_PROVIDES_RILD := true
