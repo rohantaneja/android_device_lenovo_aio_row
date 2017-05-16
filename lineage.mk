@@ -14,16 +14,18 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
+# Inherit from AOSP 64-bit support
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/.mk)
+# Inherit from AOSP product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+
+# Inherit CM's custom product configuration
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit from aio_row device
 $(call inherit-product, device/lenovo/aio_row/device.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := aio_row
@@ -31,8 +33,6 @@ PRODUCT_NAME := lineage_aio_row
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo A7000-a
 PRODUCT_MANUFACTURER := Lenovo
-
-WITH_CM_CHARGER=true
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 720

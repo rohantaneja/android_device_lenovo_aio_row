@@ -10,7 +10,7 @@ Basic   | Spec Sheet
 CPU     | 1.5GHz 64-bit Octa-Core MT6752
 GPU     | Mali-T760MP2
 Memory  | 2GB RAM
-Shipped Android Version | 5.0.2, 6.0
+Shipped Android Version | 5.0.2
 Storage | 8GB
 Display | 5.5" IPS 1280 x 720 px
 Camera  | 8MPx, LED Flash
@@ -20,7 +20,6 @@ This branch is for building 7.x based ROMs.
 ### Working:
   - Wi-Fi
   - Wi-Fi tethering
-  - RIL (SMS/calls/internet/LTE)
   - GPS
   - Bluetooth
   - AGPS
@@ -28,28 +27,31 @@ This branch is for building 7.x based ROMs.
   - Audio
   - Auto brightness
   - Rotation
-  - All sensors
-  - Flashlight
-  - Camera (with rear/front camera)
-  - Video Recorder
-  - Camera
+  - All sensors (except some camera-related)
+  - Flashlight (statusbar and camera)
+  - Camera with rear/front camera (currently breaks on flash)
   - Micro SD support
   - MTP 
   - LED Notifications
   - FM Radio
 
-### Partially Working:
+### Untested:
+  - RIL for SMS/calls/internet/LTE (need some testing)
   - Offline Charging
 
-### Other resource:
-  - Kernel: 3.10.105 (Daredevil-S) https://github.com/rohantaneja/daredevil-kernel
-  - HALs: https://github.com/rohantaneja/android_hardware_lenovo_aio_row
-  - Vendor blobs: https://github.com/rohantaneja/android_vendor_lenovo_mt6752
+### Not Working:
+  - Broken Video Codec
+  - Lenovo-specific features (shipped on board), includes proprietary camera limitations
+  - maybe more...
 
-### Credits:
+### Other resource:
+  - Kernel: 3.10.105 (Daredevil-2.0)
+  - Vendor blobs: https://github.com/rohantaneja/vendor_lenovo_mt6752
+
+### Credits (Sort by alphabetical order):
   - rohantaneja
   - xakep1993 (initial steps towards nougat)
   - daniel_hk (all his detailed guidelines and sources)
-  - mohancm100
-  - tanish2k09 (initial efforts)
-  - Compilers United (incl. aryankedare, aswinp222, HDHR)
+  - mohancm100 (updated mtk_symbols)
+  - tanish2k09 (for all his motivation)
+  - Team AMT, Russian Team of Android 7 A7000 

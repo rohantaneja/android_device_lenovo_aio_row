@@ -10,7 +10,8 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # x64 bit assignment
 MTK_K64_SUPPORT := yes
-TARGET_IS_64_BIT := true
+TARGET_USES_64_BIT_BINDER := true
+TARGET_IS_64_BIT :=true
 TARGET_KMODULES := true
 
 # Kernel generals

@@ -350,6 +350,7 @@
 /dev/tz_vfs		u:object_r:teei_vfs_device:s0
 /dev/emmcrpmb0		u:object_r:teei_rpmb_device:s0
 /dev/teei_fp		u:object_r:teei_fp_device:s0
+/dev/tfa9897(/.*)?	u:object_r:tfa9897_device:s0
 
 #############################
 # sysfs files

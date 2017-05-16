@@ -54,7 +54,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.less-secure=true \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.root_access=0 \
+    persist.sys.root_access=3 \
     ro.sys.fw.bg_apps_limits=5
 
 #PRODUCT_COPY_FILES := \
@@ -62,7 +62,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 
 # Dalvik/HWUI
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
-
-# Vendor
-$(call inherit-product, vendor/lenovo/aio_row/aio_row-vendor.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-hwui-memory.mk)

@@ -48,7 +48,11 @@ on init
 # mount different fs start
 
 on charger
+    mkdir /dev/block/platform/mtk-msdc.0/by-name 0755 root system
+    symlink /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/logo /dev/block/platform/mtk-msdc.0/by-name/logo
     mount ext4 /dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/system /system ro wait
+    chmod 0666 /dev/kmsg
+    exec /system/bin/setprop sys.usb.config adb
     start fuelgauged
     start kpoc_charger
     start servicemanager
@@ -63,8 +67,6 @@ on fs
     write /proc/bootprof "INIT:Mount_END"
 
 on fs
-
-   mount iso9660 loop@/system/etc/iAmCdRom.iso /mnt/cd-rom ro
 
 on post-fs
     # Support legacy paths
@@ -153,6 +155,8 @@ on post-fs-data
     #insmod /system/lib/modules/mali.ko
     chmod 666 /dev/mali0
     #chown system graphics /dev/mali
+
+
 
     # Touch Panel
     # chmod 0664 /dev/touch
@@ -732,10 +736,6 @@ on boot
     chown system system /sys/class/leds/torch/brightness
     chown system system /sys/class/leds/flash/brightness
 #lenovo.sw END wangsx3 add for leds sys node
-    chown system system /sys/class/leds/test-led/brightness
-    chown system system /sys/class/leds/test-led/trigger
-    chown system system /sys/class/leds/greenled/brightness
-    chown system system /sys/class/leds/greenled/trigger
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chown root   system /sys/kernel/debug/binder/transaction_log_enable
