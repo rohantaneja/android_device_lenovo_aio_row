@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
     libgui_ext \
     libui_ext \
     libmtk_symbols \
-    libwvmsym
+    libwvmsym \
+    EngineerMode
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ril.log=0 \
