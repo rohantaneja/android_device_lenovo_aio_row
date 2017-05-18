@@ -20,8 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from AOSP product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Inherit CM's custom product configuration
+# Inherit Lineage's custom product configuration
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit from aio_row device
@@ -39,5 +40,3 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
-
-$(call inherit-product-if-exists, vendor/lenovo/aio_row/aio_row-vendor.mk)

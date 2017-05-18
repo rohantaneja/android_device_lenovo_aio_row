@@ -354,8 +354,8 @@
         For this platform, it allows maximum 30MB(3MB per 1080p frame x 10
         frames) memory.
     -->
-    <VideoEditorCap  maxInputFrameWidth="1280"
-        maxInputFrameHeight="720" maxOutputFrameWidth="1280"
+    <VideoEditorCap  maxInputFrameWidth="1920"
+        maxInputFrameHeight="1080" maxOutputFrameWidth="1280"
         maxOutputFrameHeight="720" maxPrefetchYUVFrames="6"/>
     <!--
         The VideoEditor Export codec profile and level values

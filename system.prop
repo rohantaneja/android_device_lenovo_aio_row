@@ -8,6 +8,7 @@ service.adb.root=1
 
 persist.md.perm.checked=to_upgrade
 
+
 # Mediatek Chip
 persist.mtk.wcn.combo.chipid=-1
 service.wcn.driver.ready=no
@@ -15,8 +16,7 @@ service.wcn.coredump.mode=2
 ro.mediatek.chip_ver=S01
 ro.mediatek.platform=MT6752
 ro.mediatek.version.sdk=4
-ro.mediatek.version.release=alps-mp-m0.mp1-V2.39_lenovo6752.65.m_P10
-ro.mediatek.version.branch=alps-mp-m0.mp1
+ro.mediatek.version.release=
 
 # performance
 ro.mtk_perf_simple_start_win=1
@@ -31,13 +31,15 @@ ro.mediatek.wlan.p2p=1
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
 wifi.direct.interface=p2p0
+ro.wlan.mtk.wifi.5g=1
 
 # Graphic
 debug.hwui.render_dirty_regions=false
 drm.service.enabled=true
-ro.sf.lcd_density=320
-ro.opengles.version=196608
+persist.sys.lcd_density=480
+ro.opengles.version=196609
 ro.kernel.qemu.gles=0
+ro.sf.lcd_density=320
 ro.sf.hwrotation=0
 
 # USB
@@ -57,7 +59,7 @@ ro.camera.sound.forced=0
 #ro.mtk_audenh_support=1
 ro.mtk_audio_tuning_tool_ver=V1
 ro.mtk_dual_mic_support=1
-ro.lenovo.audioparaver=AIO-ROW__PVT2_Audio_Paramrter_EN_20150303
+ro.lenovo.audioparaver=K50-T5_Audio_Parameters_MP_CN_20160322
 
 # temporary enables NAV bar (soft keys)
 qemu.hw.mainkeys=1
@@ -73,6 +75,7 @@ rild.libargs=-d /dev/ttyC0
 ro.telephony.sim.count=2
 ro.telephony.ril_class=MediaTekRIL
 ro.telephony.ril.config=fakeiccid
+ro.telephony.default_network=0,1
 
 persist.gemini.sim_num=2
 persist.radio.default.sim=0
@@ -83,6 +86,7 @@ persist.radio.fd.off.r8.counter=5
 persist.radio.multisim.config=dsds
 
 bgw.current3gband=0
+#mux.debuglog.enable=0
 ril.external.md=0
 ril.current.share_modem=2
 ril.first.md=1
@@ -114,4 +118,3 @@ ro.mtk_cam_vfb=1
 ro.mtk_matv_analog_support=1
 ro.mtk_wapi_support=1
 ro.mtk_wappush_support=1
-
