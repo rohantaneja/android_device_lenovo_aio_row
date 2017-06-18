@@ -7,3 +7,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init.mt6752.rc:root/init.mt6752.rc \
     $(LOCAL_PATH)/rootdir/init.project.rc:root/init.project.rc \
     $(LOCAL_PATH)/rootdir/ueventd.mt6752.rc:root/ueventd.mt6752.rc
+
+# Spectrum additions
+PRODUCT_COPY_FILES += \
+ +    $(LOCAL_PATH)/rootdir/init.spectrum.sh:root/init.spectrum.sh \
+    $(LOCAL_PATH)/rootdir/init.spectrum.rc:root/init.spectrum.rc
