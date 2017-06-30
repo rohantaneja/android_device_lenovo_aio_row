@@ -37,20 +37,18 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # default.prop
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0 \
-    ro.secure=0 \
     camera.disable_zsl_mode=1 \
-    dalvik.vm.dex2oat-Xms=64m \
-    dalvik.vm.dex2oat-Xmx=512m \
-    dalvik.vm.image-dex2oat-Xms=64m \
-    dalvik.vm.image-dex2oat-Xmx=64m \
     persist.service.acm.enable=0 \
     persist.sys.usb.config=mtp,adb \
-    ro.allow.mock.location=0 \
     ro.config.low_ram=false \
-    ro.debuggable=1 \
     ro.dalvik.vm.native.bridge=0 \
-    ro.mount.fs=EXT4
+    ro.mount.fs=EXT4 \
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+	ro.secure=0 \
+	ro.allow.mock.location=1 \
+	ro.debuggable=1 \
+	ro.adb.secure=0 \
 
 # build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -58,8 +56,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.less-secure=true \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.root_access=3 \
-    ro.sys.fw.bg_apps_limits=5
+    persist.sys.root_access=3
+
+# extra log controls prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ril.log=0 \
+    ro.disable.xlog=0
+
 
 #PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel 
