@@ -80,11 +80,12 @@
     </string-array>
 
     <string-array name="config_tether_usb_regexs">
-        <item>rndis\\d</item>
+        <item>"usb\\d"</item>
+        <item>"rndis\\d"</item>
     </string-array>
 
     <string-array name="config_tether_wifi_regexs">
-        <item>ap\\d</item>
+        <item>"wlan0"</item>
     </string-array>
 
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
@@ -100,7 +101,7 @@
     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ff00ff00</color>
+    <color name="config_defaultNotificationColor">#ffffffff</color>
 
     <!-- Default value for led color when battery is low on charge -->
     <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
@@ -392,10 +393,8 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-    <integer name="config_screenBrightnessDoze">15</integer>
-
-    <!-- If true, the doze component is not started until after the screen has been
-         turned off and the screen off animation has been performed. -->
+    <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
+    <integer name="config_screenBrightnessDoze">2</integer>
     <bool name="config_dozeAfterScreenOff">true</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and

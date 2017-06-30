@@ -4,4 +4,4 @@ PRODUCT_PACKAGES += \
 
 # Enable Doze Services
 PRODUCT_PACKAGES += \
-    DozeService
+    LenovoDoze

@@ -29,7 +29,7 @@ mediatek.wlan.module.postfix=_consys_mt6752
 ro.mediatek.wlan.wsc=1
 ro.mediatek.wlan.p2p=1
 wifi.interface=wlan0
-wifi.tethering.interface=ap0
+wifi.tethering.interface=ap
 wifi.direct.interface=p2p0
 
 # Graphic
