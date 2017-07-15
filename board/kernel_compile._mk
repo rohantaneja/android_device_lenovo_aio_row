@@ -1,6 +1,0 @@
-# Kernel properties
-CONFIG_NO_ERROR_ON_MISMATCH=y
-TARGET_KERNEL_SOURCE := kernel/lenovo/aio_row
-TARGET_KERNEL_CONFIG := aio_row_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-MTK_APPENDED_DTB_SUPPORT := yes

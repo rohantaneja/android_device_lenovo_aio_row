@@ -1,7 +1,7 @@
 Lenovo A7000-a (aio_row)
 ==============
 
-![Lenovo A7000-a](https://img.xda-cdn.com/07icUxTNuZWDx96QYT5cuxU8h9o=/https%3A%2F%2F1.bp.blogspot.com%2F-Bi3y-tnLrdw%2FVzyVpZgjqEI%2FAAAAAAAAAgw%2Ff-K2t1MDmjID056U9iHKCfSxqnk-rItBgCLcB%2Fs640%2Fdareaosp.png "AOSP on Lenovo A7000-a")
+![Lenovo A7000-a](https://img.xda-cdn.com/07icUxTNuZWDx96QYT5cuxU8h9o=/https%3A%2F%2F1.bp.blogspot.com%2F-Bi3y-tnLrdw%2FVzyVpZgjqEI%2FAAAAAAAAAgw%2Ff-K2t1MDmjID056U9iHKCfSxqnk-rItBgCLcB%2Fs640%2Fdareaosp.png "Lenovo A7000-a")
 
 
 ### Specifications:
