@@ -80,12 +80,11 @@
     </string-array>
 
     <string-array name="config_tether_usb_regexs">
-        <item>"usb\\d"</item>
-        <item>"rndis\\d"</item>
+        <item>rndis\\d</item>
     </string-array>
 
     <string-array name="config_tether_wifi_regexs">
-        <item>"wlan0"</item>
+        <item>ap\\d</item>
     </string-array>
 
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
@@ -94,26 +93,19 @@
     </string-array>
 
     <bool name="config_wifi_background_scan_support">true</bool>
-<!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+
+<!-- LED Notifications configurations -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+    <bool name="config_multiColorNotificationLed">true</bool>
     <bool name="config_intrusiveNotificationLed">true</bool>
-
-    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveBatteryLed">true</bool>
-
-    <!-- Default color for notification LED is green. -->
-    <color name="config_defaultNotificationColor">#ffffffff</color>
-
-    <!-- Default value for led color when battery is low on charge -->
+    <color name="config_defaultNotificationColor">#ff00ff00</color>
     <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is medium charged -->
     <integer name="config_notificationsBatteryMediumARGB">0xffff0000</integer>
-
-    <!-- Default value for led color when battery is fully charged -->
-    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer>
-   
+    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer> 
     <bool name="config_automatic_brightness_available">true</bool>
-
+    
+    <!-- Control Brightness levels -->
     <integer-array name="config_autoBrightnessLevels">
         <item>16</item>
         <item>32</item>
@@ -154,42 +146,6 @@
         <item>210</item>
         <item>230</item>
         <item>255</item>
-    </integer-array>
-    <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-    </integer-array>
-    <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-        <item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
-	<item>255</item>
     </integer-array>
     
  <!-- Vibrator pattern for feedback about a long screen/key press -->
@@ -326,6 +282,7 @@
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
+
     <!--  Whether Multiuser UI should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
@@ -339,60 +296,14 @@
     <integer name="config_lowMemoryKillerMinFreeKbytesAbsolute">-1</integer>
 
     <bool name="config_user_notification_of_restrictied_mobile_access">false</bool>
-	    <!-- Flag specifying whether VoLTE is available on device -->
-     <bool name="config_device_volte_available">true</bool>
- 
-     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
-          carrier provisioning. If false: hard disabled. If true: then depends on carrier
-          provisioning, availability etc -->
-     <bool name="config_carrier_volte_available">true</bool>
- 
-     <!-- Flag specifying whether WFC over IMS is available on device -->
-     <bool name="config_device_wfc_ims_available">true</bool>
-	    <!-- ComponentName of a dream to show whenever the system would otherwise have
-         gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
-         try to start this dream if possible.  The dream should typically call startDozing()
-         to put the display into a low power state and allow the application processor
-         to be suspended.  When the dream ends, the system will go to sleep as usual.
-         Specify the component name or an empty string if none.
-         Note that doze dreams are not subject to the same start conditions as ordinary dreams.
-         Doze dreams will run whenever the power manager is in a dozing state. -->
-    <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
-
-    <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
-         device from the display on/off state.
-         When false, autosuspend_disable() will be called before the display is turned on
-         and autosuspend_enable() will be called after the display is turned off.
-         This mode provides best compatibility for devices using legacy power management
-         features such as early suspend / late resume.
-         When true, autosuspend_display() and autosuspend_enable() will be called
-         independently of whether the display is being turned on or off.  This mode
-         enables the power manager to suspend the application processor while the
-         display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to autosuspend.h for details.
-    -->
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
     <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
 
-    <!-- Screen brightness used to dim the screen while dozing in a very low power state.
-         May be less than the minimum allowed brightness setting
-         that can be set by the user. -->
+    <!-- Initialize Doze for the device -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
     <integer name="config_screenBrightnessDoze">2</integer>
     <bool name="config_dozeAfterScreenOff">true</bool>
@@ -409,17 +320,9 @@
     <!-- Control whether Night display is available. -->
     <bool name="config_nightDisplayAvailable">true</bool>
 	
- <!-- Whether WiFi display is supported by this device.
-          There are many prerequisites for this feature to work correctly.
-          Here are a few of them:
-          * The WiFi radio must support WiFi P2P.
-          * The WiFi radio must support concurrent connections to the WiFi display and
-            to an access point.
-          * The Audio Flinger audio_policy.conf file must specify a rule for the "r_submix"
-            remote submix module.  This module is used to record and stream system
-            audio output to the WiFi display encoder in the media server.
-          * The remote submix module "audio.r_submix.default" must be installed on the device.
-          * The device must be provisioned with HDCP keys (for protected content).
-     -->
+    <!-- WiFi display is supported by this device. -->
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- DT2W support -->
+    <bool name="config_supportDoubleTapWake">true</bool>
 </resources>
