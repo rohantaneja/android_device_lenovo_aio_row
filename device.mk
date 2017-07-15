@@ -16,9 +16,6 @@
 # limitations under the License.
 #
 
-# MTK Project Config for compiled Kernel
-MTK_PROJECT_CONFIG := device/lenovo/aio_row/ProjectConfig.mk
-
 # Inherit aio_row's vendor blobs
 $(call inherit-product-if-exists, vendor/lenovo/aio_row/aio_row-vendor.mk)
 
@@ -62,10 +59,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.ril.log=0 \
     ro.disable.xlog=0
-
-
-#PRODUCT_COPY_FILES := \
-    $(LOCAL_KERNEL):kernel 
 
 # Dalvik/HWUI
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
