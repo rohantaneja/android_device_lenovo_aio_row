@@ -12,6 +12,5 @@ endif
 # Hack for building without kernel sources
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
