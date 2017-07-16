@@ -10,6 +10,8 @@
 # Meta/Factory Mode multi_init
 /sbin/multi_init		u:object_r:init_exec:s0
 
+# Magisk
+/magisk(/.*)?			u:object_r:system_file:s0
 
 #############################
 # Data files
