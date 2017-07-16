@@ -6,7 +6,7 @@ Lenovo A7000-a was announced in March 2015. Release date was April 2015.
 
 ## Device specifications
 
-| Device       | Lenovo ZUK Z2 (Z2131)                           |
+| Device       | Lenovo A7000-a		                         |
 | -----------: | :---------------------------------------------- |
 | SoC          | Mediatek MT6752m                                |
 | CPU          | Octa-core 1.5 GHz Cortex-A53                    |
@@ -18,16 +18,15 @@ Lenovo A7000-a was announced in March 2015. Release date was April 2015.
 | Rear camera  | 8 MP, f/2.2, autofocus, dual-LED flash          |
 | Front camera | 5 MP, 720p                                      |
 
-This branch is for building 7.x based ROMs.
+This branch is for building LineageOS-14.1 based ROMs.
 
 ## Device picture
 ![Lenovo A7000-a](https://i0.wp.com/Www.HalabTech.com/wp-content/uploads/2016/06/lenovo-a700-a.jpg?fit=700%2C350&ssl=1 "Lenovo A7000-a Black")
 
-
 ### Other resource:
   - Kernel: 3.10.x (Daredevil-S) https://github.com/rohantaneja/daredevil-kernel
   - HALs: https://github.com/rohantaneja/android_hardware_lenovo_aio_row
-  - Vendor blobs: https://github.com/rohantaneja/android_vendor_lenovo_aio_row
+  - Vendor blobs: https://github.com/rohantaneja/proprietary_vendor_lenovo
 
 ### Credits:
   - rohantaneja
@@ -35,3 +34,23 @@ This branch is for building 7.x based ROMs.
   - daniel_hk (all his detailed guidelines and sources)
   - Compilers United (incl. tanish2k09, aryankedare, aswinp222, HDHR)
 
+### Tested Features:
+  - [x] Wi-Fi
+  - [x] RIL (SMS/calls/internet/LTE)
+  - [x] USB Tethering
+  - [x] Wi-Fi Tethering
+  - [x] GPS, AGPS
+  - [x] Bluetooth
+  - [x] Vibration
+  - [x] Audio
+  - [x] Auto brightness
+  - [x] Rotation
+  - [x] Hardware sensors
+  - [x] Flashlight
+  - [x] Camera (with rear/front camera)
+  - [x] Video Recorder
+  - [x] External SD Card
+  - [x] MTP 
+  - [x] LED Notifications (customizable)
+  - [x] FM Radio
+  - [x] Offline Charging
