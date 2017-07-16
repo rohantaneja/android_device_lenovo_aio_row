@@ -95,8 +95,6 @@
     <bool name="config_wifi_background_scan_support">true</bool>
 
 <!-- LED Notifications configurations -->
-    <bool name="config_multiColorBatteryLed">true</bool>
-    <bool name="config_multiColorNotificationLed">true</bool>
     <bool name="config_intrusiveNotificationLed">true</bool>
     <bool name="config_intrusiveBatteryLed">true</bool>
     <color name="config_defaultNotificationColor">#ff00ff00</color>
