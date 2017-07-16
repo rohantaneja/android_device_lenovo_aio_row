@@ -1,0 +1,18 @@
+# mount_point	fstype		device			flags
+# rev.1 by:daniel_hk
+/boot		emmc	/dev/block/mmcblk0p8	flags=display="boot";backup=1
+/system		ext4	/dev/block/mmcblk0p19
+/cache		ext4	/dev/block/mmcblk0p20
+/data		ext4	/dev/block/mmcblk0p21
+/recovery	emmc	/dev/block/mmcblk0p9	flags=display="recovery";backup=1
+/system_image	emmc	/dev/block/mmcblk0p19
+
+/lk		emmc	/dev/block/mmcblk0p7	flags=display="uboot";backup=1;flashimg=1
+/logo		emmc	/dev/block/mmcblk0p12	flags=display="logo";backup=1;flashimg=1
+/nvram		emmc	/dev/block/mmcblk0p2	flags=display="nvram";backup=1;flashimg=1
+/proinfo	emmc	/dev/block/mmcblk0p1	flags=display="proinfo";backup=1;flashimg=1
+/protect_f	ext4	/dev/block/mmcblk0p3	flags=display="protect_f";backup=1
+/protect_s	ext4	/dev/block/mmcblk0p4	flags=display="protect_s";backup=1
+
+/external_sd	auto	/dev/block/mmcblk1p1	/dev/block/mmcblk1	flags=display="Micro SDCard";storage;wipeingui;removable;backup=0
+/usbotg		auto    /dev/block/sda1		/dev/block/sda		flags=display="USB-Drive";storage;wipeingui;removable;backup=0
