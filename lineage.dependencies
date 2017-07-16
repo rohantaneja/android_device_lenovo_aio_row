@@ -1,0 +1,20 @@
+[
+   {
+      "remote":"github",
+      "repository":"rohantaneja/android_hardware_lenovo_aio_row",
+      "target_path":"hardware/lenovo/aio_row",
+      "branch":"cm-14.1"
+   },
+   {
+      "remote":"github",
+      "repository":"rohantaneja/proprietary_vendor_lenovo",
+      "target_path":"vendor/lenovo",
+      "branch":"cm-14.1"
+   },
+   {
+      "remote":"github",
+      "repository":"LineageOS/android_packages_resources_devicesettings",
+      "target_path":"packages/resources/devicesettings",
+      "branch":"cm-14.1"
+   }
+]
