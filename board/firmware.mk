@@ -1,4 +1,3 @@
-
 # Architecture
 ARCH := arm64
 TARGET_ARCH := arm64

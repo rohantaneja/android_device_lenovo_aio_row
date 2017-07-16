@@ -1,3 +1,7 @@
+<!--
+     Copyright (C) 2017 The LineageOS Project 
+-->
+
 <resources>
   <bool name="has_led_flash">true</bool>
   <bool name="config_show_volumeRockerWake">true</bool>

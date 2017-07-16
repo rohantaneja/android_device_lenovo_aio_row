@@ -54,7 +54,6 @@ sys.ipo.pwrdncap=2
 fmradio.driver.enable=1
 ro.audio.silent=0
 ro.camera.sound.forced=0
-#ro.mtk_audenh_support=1
 ro.mtk_audio_tuning_tool_ver=V1
 ro.mtk_dual_mic_support=1
 ro.lenovo.audioparaver=AIO-ROW__PVT2_Audio_Paramrter_EN_20150303

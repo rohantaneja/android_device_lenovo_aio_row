@@ -1,3 +1,5 @@
+Copyright (c) 2017 - Rohan Taneja
+
 Device configuration for Lenovo A7000-a
 ==============
 Lenovo A7000-a (codenamed _"aio_row"_) is mid-range budget smartphone from Lenovo.
