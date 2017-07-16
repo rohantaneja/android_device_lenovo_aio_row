@@ -1,14 +1,11 @@
-# recovery
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+# Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_RECOVERY_SWIPE := true
-BOARD_SUPPRESS_EMMC_WIPE := true
-BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-BOARD_USES_FULL_RECOVERY_IMAGE := true
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/recovery.fstab
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 
 # TWRP
-TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/recovery.fstab
+ifeq ($(RECOVERY_VARIANT), twrp)
+
 HAVE_SELINUX := true
 TW_INCLUDE_CRYPTO := true
 TW_NO_USB_STORAGE := false
@@ -22,4 +19,14 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+TW_EXCLUDE_SUPERSU := true
+# TWRP specific fstab
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+else
+BOARD_RECOVERY_SWIPE := true
+BOARD_SUPPRESS_EMMC_WIPE := true
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+endif
