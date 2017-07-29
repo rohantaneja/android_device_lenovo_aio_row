@@ -46,5 +46,8 @@ EXTENDED_FONT_FOOTPRINT := true
 # Configure jemalloc for low memory
 MALLOC_SVELTE := true
 
+# Preload Library
+TARGET_LDPRELOAD += libmtk_symbols.so
+
 # System.prop
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
