@@ -15,10 +15,10 @@ on property:sys.boot_completed=1
 # Daredevil Balanced Profile
 on property:persist.spectrum.profile=0
     # Add configs here
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1170000"
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq "1170000"
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "1170000"
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq "1170000"   
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq "1495000"
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq "1495000"
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq "1495000"
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq "1495000"   
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq "702000"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq "702000"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq "702000"
