@@ -36,7 +36,7 @@ wifi.direct.interface=p2p0
 debug.hwui.render_dirty_regions=false
 drm.service.enabled=true
 ro.sf.lcd_density=320
-ro.opengles.version=196608
+ro.opengles.version=196609
 ro.kernel.qemu.gles=0
 ro.sf.hwrotation=0
 
