@@ -1,10 +1,9 @@
 LOCAL_PATH := device/lenovo/aio_row
 
-TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/board/bootimg.mk
-TARGET_PREBUILT_RECOVERY_KERNEL := device/lenovo/aio_row/kernel
+
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-    LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+    LOCAL_KERNEL := $(LOCAL_PATH)/Image.gz-dtb
 else
     LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
