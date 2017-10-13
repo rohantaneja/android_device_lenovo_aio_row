@@ -12,9 +12,6 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    # Preload symbols for MTK
-    export LD_PRELOAD "libmtk_symbols.so"
-
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
 

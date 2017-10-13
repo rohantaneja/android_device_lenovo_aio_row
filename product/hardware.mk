@@ -27,7 +27,8 @@ PRODUCT_PACKAGES += \
     libgui_ext \
     libui_ext \
     libmtk_symbols \
-    libwvmsym
+    libwvmsym \
+    libxlog
 
 # MTK EngineerMode
 PRODUCT_PACKAGES += \
