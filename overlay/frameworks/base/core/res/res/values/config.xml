@@ -84,7 +84,7 @@
     </string-array>
 
     <string-array name="config_tether_wifi_regexs">
-        <item>ap\\d</item>
+        <item>"wlan\\d"</item>
     </string-array>
 
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
@@ -94,15 +94,23 @@
 
     <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- Array of allowable ConnectivityManager network types for tethering -->
+    <integer-array name="config_tether_upstream_types">
+        <item>0</item>
+        <item>1</item>
+        <item>5</item>
+        <item>7</item>
+        <item>9</item>
+    </integer-array>
+
 <!-- LED Notifications configurations -->
     <bool name="config_intrusiveNotificationLed">true</bool>
-    <bool name="config_intrusiveBatteryLed">true</bool>
     <color name="config_defaultNotificationColor">#ff00ff00</color>
     <integer name="config_notificationsBatteryLowARGB">0xffff0000</integer>
     <integer name="config_notificationsBatteryMediumARGB">0xffff0000</integer>
-    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer> 
+    <integer name="config_notificationsBatteryFullARGB">0xff00ff00</integer>
     <bool name="config_automatic_brightness_available">true</bool>
-    
+
     <!-- Control Brightness levels -->
     <integer-array name="config_autoBrightnessLevels">
         <item>16</item>
@@ -145,78 +153,7 @@
         <item>230</item>
         <item>255</item>
     </integer-array>
-    
- <!-- Vibrator pattern for feedback about a long screen/key press -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-    </integer-array>
 
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>0</item>
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
-    <integer-array name="config_keyboardTapVibePattern">
-        <item>40</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback when selecting an hour/minute tick of a Clock -->
-    <integer-array name="config_clockTickVibePattern">
-        <item>125</item>
-        <item>30</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback when selecting a day/month/year date of a Calendar -->
-    <integer-array name="config_calendarDateVibePattern">
-        <item>125</item>
-        <item>30</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
-    <integer-array name="config_safeModeDisabledVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about booting with safe mode disabled -->
-    <integer-array name="config_safeModeEnabledVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-        <item>500</item>
-        <item>600</item>
-    </integer-array>
-
-    <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
-    <integer-array name="config_scrollBarrierVibePattern">
-        <item>0</item>
-        <item>15</item>
-        <item>10</item>
-        <item>10</item>
-    </integer-array>
-
-<integer-array name="config_defaultNotificationVibePattern">
-        <item>0</item>
-        <item>350</item>
-        <item>250</item>
-        <item>350</item>
-    </integer-array>
-    <integer-array name="config_notificationFallbackVibePattern">
-        <item>0</item>
-        <item>100</item>
-        <item>150</item>
-        <item>100</item>
-    </integer-array>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
@@ -227,20 +164,22 @@
 
     <!-- Shutdown if the battery temperature exceeds (this value * 0.1) Celsius. -->
     <integer name="config_shutdownBatteryTemperature">680</integer>
-
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
     <!-- Whether safe headphone volume is enabled or not (country specific). -->
     <bool name="config_safe_media_volume_enabled">true</bool>
 
+    <!-- Set this true only if the device has separate attention and notification lights. -->
+    <bool name="config_useAttentionLight">true</bool>
+
+    <!-- Display low battery warning when battery level dips to this value -->
+    <integer name="config_lowBatteryWarningLevel">10</integer>
+
     <!-- If supported, are dreams enabled? (by default) -->
     <bool name="config_dreamsEnabledByDefault">true</bool>
 
-
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
-    
-
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
 
 <!-- Hardware 'face' keys present on the device, stored as a bit field.
@@ -295,6 +234,14 @@
 
     <bool name="config_user_notification_of_restrictied_mobile_access">false</bool>
 
+    <!-- Override the default detection behavior for the framework method
+         android.view.ViewConfiguration#hasPermanentMenuKey().
+         Valid settings are:
+         0 - No change. Use the default autodetection behavior.
+         1 - The device DOES have a permanent menu key; ignore autodetection.
+         2 - The device DOES NOT have a permanent menu key; ignore autodetection. -->
+    <integer name="config_overrideHasPermanentMenuKey">2</integer>
+
     <!-- Power Management: Specifies whether to decouple the interactive state of the
          device from the display on/off state.
     -->
@@ -306,20 +253,14 @@
     <integer name="config_screenBrightnessDoze">2</integer>
     <bool name="config_dozeAfterScreenOff">true</bool>
 
-    <!-- Set this to true to enable the platform's auto-power-save modes like doze and
-         app standby.  These are not enabled by default because they require a standard
-         cloud-to-device messaging service for apps to interact correctly with the modes
-         (such as to be able to deliver an instant message to the device even when it is
-         dozing).  This should be enabled if you have such services and expect apps to
-         correctly use them when installed on your device.  Otherwise, keep this disabled
-         so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
-	
+
     <!-- Control whether Night display is available. -->
     <bool name="config_nightDisplayAvailable">true</bool>
-	
+
     <!-- WiFi display is supported by this device. -->
-    <bool name="config_enableWifiDisplay">true</bool>
+    <bool name="config_enableWifiDisplay">true</bool>v
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
 
     <!-- DT2W support -->
     <bool name="config_supportDoubleTapWake">true</bool>
