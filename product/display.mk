@@ -4,5 +4,4 @@ PRODUCT_PACKAGES += \
 
 # Enable Doze Services
 PRODUCT_PACKAGES += \
-    LenovoDoze \
-    ConfigPanel
+    LenovoDoze

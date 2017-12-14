@@ -1,7 +1,6 @@
 # MTK platform .rc configure
 
 import init.project.rc
-import /init.spectrum.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import init.modem.rc

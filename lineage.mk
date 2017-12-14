@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2017 AospExtended Project
+# Copyright (c) 2017 - Rohan Taneja
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,26 +14,29 @@
 # limitations under the License.
 #
 
-# Inherit from those products. Most specific first.
+# Inherit from AOSP 64-bit support
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from AOSP product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Inherit Lineage's custom product configuration
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit from aio_row device
 $(call inherit-product, device/lenovo/aio_row/device.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
-
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := aio_row
-PRODUCT_NAME := aosp_aio_row
+PRODUCT_NAME := lineage_aio_row
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo A7000-a
 PRODUCT_MANUFACTURER := Lenovo
 
-# AEX-ify stuffs
-DEFAULT_ROOT_METHOD := magisk
-EXTENDED_BUILD_TYPE=OFFICIAL
-WITH_CM_CHARGER=true
-TARGET_BOOT_ANIMATION_RES=720
+# Boot animation
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
+
+PRODUCT_GMS_CLIENTID_BASE := android-lenovo
