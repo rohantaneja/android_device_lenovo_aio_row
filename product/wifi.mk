@@ -10,7 +10,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     libwifi-hal-mt66xx \
     lib_driver_cmd_mt66xx \
-    libnl_2\
+    libnl_2 \
     hostapd
 
 # Radio dependencies

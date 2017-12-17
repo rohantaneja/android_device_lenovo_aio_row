@@ -43,7 +43,7 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 	ro.secure=0 \
 	ro.allow.mock.location=1 \
 	ro.debuggable=1 \
-	ro.adb.secure=0 \
+	ro.adb.secure=0
 
 # build.prop
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -51,7 +51,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.less-secure=true \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
-    persist.sys.root_access=3
+    persist.sys.root_access=3 \
+    persist.force.gps.mode=gnss
 
 # extra log controls prop
 PRODUCT_PROPERTY_OVERRIDES += \

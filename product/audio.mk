@@ -6,6 +6,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio_policy.default \
+    audio_policy.stub \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \
