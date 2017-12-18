@@ -1,0 +1,14 @@
+[
+   {
+      "remote":"github",
+      "repository":"dotOS-Devices/android_hardware_lenovo_aio_row",
+      "target_path":"hardware/lenovo/aio_row",
+      "branch":"dot-n"
+   },
+   {
+      "remote":"github",
+      "repository":"dotOS-Devices/proprietary_vendor_lenovo",
+      "target_path":"vendor/lenovo",
+      "branch":"dot-n"
+   }
+]
